@@ -41,5 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isError) {
             event.preventDefault();
         }
+        $.ajax({
+            url: "https://zkgohst-13.github.io/portfolio/php/contact.php",
+            // ...
+        });
+        
     });
 });
