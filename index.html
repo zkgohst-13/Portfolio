@@ -9,7 +9,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="script.js"></script>
         <link rel="stylesheet" href="CSS/style.css">
         <meta charset="utf-8">
     </head>
@@ -125,62 +124,62 @@
             </section>
         
         <section id="contact">
-             <div class="container">
+            <div class="container">
 
-        <div class="divider"></div>
-        <div class="heading">
-            <h2>Contact</h2>
-        </div>
-        <div class="row justify-content-md-center">
-            <div class="col-lg-10 col-lg-offset-1">
-                <form id="contact-form" method="POST" action="" role="form">
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <label for="firstname">First Name *</label>
-                            <input type="text" id="firstname" name="firstname"  class="form-control" placeholder="Your firstname">
-
-                            <p class="comments"></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name"  class="form-control" placeholder="Your name">
-
-                            <p class="comments"></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email">Email *</label>
-                            <input type="text" id="email" name="email"  class="form-control" placeholder="Your email">
-
-                            <p class="comments"></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="phone">Phone</label>
-                            <input type="text" id="phone" name="phone" class="form-control" placeholder="Your phone">
-
-                            <p class="comments"></p>
-                        </div>
-                        <div class="col-md-12">
-                            <label for="message">Message *</label>
-                            <textarea type="message" id="message" name="message" class="form-control" rows="4" placeholder="Your message"></textarea>
-
-                            <p class="comments"></p>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="blue"><strong>* This information is required.</strong></p>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="submit" class="button1" value="Envoyer">
-                        </div>
-
+                <div class="divider"></div>
+                <div class="heading">
+                    <h2>Contact</h2>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <form id="contact-form" method="POST" action="php/contact.php" role="form">
+                            <div class="row">
+        
+                                <div class="col-md-6">
+                                    <label for="firstname">First Name *</label>
+                                    <input type="text" id="firstname" name="firstname"  class="form-control" placeholder="Your firstname">
+        
+                                    <p class="comments"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name"  class="form-control" placeholder="Your name">
+        
+                                    <p class="comments"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email">Email *</label>
+                                    <input type="text" id="email" name="email"  class="form-control" placeholder="Your email">
+        
+                                    <p class="comments"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Your phone">
+        
+                                    <p class="comments"></p>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="message">Message *</label>
+                                    <textarea type="message" id="message" name="message" class="form-control" rows="4" placeholder="Your message"></textarea>
+        
+                                    <p class="comments"></p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="blue"><strong>* This information is required.</strong></p>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="button1" value="Envoyer">
+                                </div>
+        
+                            </div>
+        
+                           
+        
+                        </form>
                     </div>
-
-                   
-
-                </form>
-            </div>
-        </div>
-
+                </div>
+        
     </div>
 
         </section>
@@ -191,6 +190,6 @@
             </a>
             <h5>© ISLEM BADAOUI</h5>
         </footer>
-        
+        <script src="script.js"></script>
     </body>
 </html>
