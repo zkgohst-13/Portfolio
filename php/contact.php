@@ -3,13 +3,13 @@
     $array = array("firstname" => "", "name" => "", "email" => "", "phone" => "", "message" => "", "firstnameError" => "", "nameError" => "", "emailError" => "", "phoneError" => "", "messageError" => "", "isSuccess" => false);
     $emailTo = "badaouiislem440@gmail.com";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    if ($_SERVER["REQUEST_METHOD"] == "GET") 
     { 
-        $array["firstname"] = test_input($_POST["firstname"]);
-        $array["name"] = test_input($_POST["name"]);
-        $array["email"] = test_input($_POST["email"]);
-        $array["phone"] = test_input($_POST["phone"]);
-        $array["message"] = test_input($_POST["message"]);
+        $array["firstname"] = test_input($_GET["firstname"]);
+        $array["name"] = test_input($_GET["name"]);
+        $array["email"] = test_input($_GET["email"]);
+        $array["phone"] = test_input($_GET["phone"]);
+        $array["message"] = test_input($_GET["message"]);
         $array["isSuccess"] = true; 
         $emailText = "";
         
