@@ -1,32 +1,45 @@
-$(function () {
-    
-    $('#contact-form').submit(function(e) {
-        e.preventDefault();
-        $('.comments').empty();
-        var postdata = $('#contact-form').serialize();
-        
-        $.ajax({
-            type: 'POST',
-            url: 'php/contact.php',
-            data: postdata,
-            dataType: 'json',
-            success: function(json) {
-                 
-                if(json.isSuccess) 
-                {
-                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
-                    $('#contact-form')[0].reset();
-                }
-                else
-                {
-                    $('#firstname + .comments').html(json.firstnameError);
-                    $('#name + .comments').html(json.nameError);
-                    $('#email + .comments').html(json.emailError);
-                    $('#phone + .comments').html(json.phoneError);
-                    $('#message + .comments').html(json.messageError);
-                }                
-            }
-        });
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.getElementById("contact-form");
+    form.addEventListener("submit", function (event) {
+        var isError = false;
+        var errorMessage = document.querySelectorAll(".comments");
 
+        errorMessage.forEach(function (error) {
+            error.innerHTML = "";
+        });
+
+        var firstName = document.getElementById("firstname");
+        if (firstName.value === "") {
+            document.querySelector("#firstname + .comments").innerHTML = "I WANT TO KNOW YOUR FIRSTNAME !";
+            isError = true;
+        }
+
+        var name = document.getElementById("name");
+        if (name.value === "") {
+            document.querySelector("#name + .comments").innerHTML = "PLEASE ENTER YOUR LAST NAME !";
+            isError = true;
+        }
+
+        var email = document.getElementById("email");
+        if (email.value === "") {
+            document.querySelector("#email + .comments").innerHTML = "PLEASE INSERT A VALID EMAIL  !";
+            isError = true;
+        }
+
+        var phone = document.getElementById("phone");
+        if (phone.value === "") {
+            document.querySelector("#phone + .comments").innerHTML = "ONLY NUMBERS OR SPACES ARE REQUIRED";
+            isError = true;
+        }
+
+        var message = document.getElementById("message");
+        if (message.value === "") {
+            document.querySelector("#message + .comments").innerHTML = "WHAT DO YOU WANT TO TELL ME ??";
+            isError = true;
+        }
+
+        if (isError) {
+            event.preventDefault();
+        }
+    });
 });
