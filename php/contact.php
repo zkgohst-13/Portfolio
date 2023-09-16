@@ -66,7 +66,7 @@
         if($array["isSuccess"]) 
         {
             $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
-            mail($emailTo, "a message from your site", $emailText, $headers);
+            mail($emailTo, "a message from https://zkgohst-13.github.io/portfolio", $emailText, $headers);
         }
         
         echo json_encode($array);
